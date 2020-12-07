@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fader">
+        <img src="yo.jpg" />
+        <img src="yo.jpg" />
+        <img src="yo.jpg" />
+        <img src="yo.jpg" />
+
+        <script>
+            $(document).ready(function() {});
+            $("img").hover(cambiar, restaurar); {};
+
+            function cambiar(e) {
+                $(this).attr("src", $(this).attr("src").replace("yo.jpg", "yoalternativo.jpg"));
+            }
+
+            function restaurar(e) {
+                $(this).attr("src", $(this).attr("src").replace("yoalternativo.jpg", "yo.jpg"));
+            }
+        </script>
+
+
+
+
+
+
+</body>
+
+</html>
